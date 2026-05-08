@@ -17,7 +17,8 @@ mostrar(expr6)
 ////
 
 mostrar(derivar(Numero(3),Atomo('x')))
-mostrar(derivar(expr5,Atomo('x')))
+mostrar(derivar(expr6,Atomo('x')))
 mostrar(derivar(expr1,Atomo('y')))
 mostrar(derivar(Resta(Numero(6),Prod(Numero(3.0),Atomo('y'))),Atomo('x')))
 mostrar(derivar(Div(Atomo('x'),Suma(Atomo('x'),Numero(5.0))),Atomo('k')))
+mostrar(derivar(Numero(9),Atomo('x')))

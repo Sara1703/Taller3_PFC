@@ -23,36 +23,31 @@ mostrar(derivar(Resta(Numero(6),Prod(Numero(3.0),Atomo('y'))),Atomo('x')))
 mostrar(derivar(Div(Atomo('x'),Suma(Atomo('x'),Numero(5.0))),Atomo('k')))
 
 
-mostrar (Numero ( 5.0 ))
+//mostrar (Numero ( 5.0 ))
 evaluar(Numero ( 10.0 ) , Atomo( 'y'  ) , 8.0 )
-
-mostrar (Atomo( 'z' ) )
 evaluar (Atomo( 'y' ) ,Atomo( 'y' ) , 9.0 )
-
-mostrar (Suma( expr1 , expr2 ) )
 evaluar (Suma( expr1 , expr2 ) ,Atomo( 'w' ) , 2.0 )
-
-mostrar ( Prod ( expr1 , expr2 ) )
 evaluar ( Prod ( expr1 , expr2 ) ,Atomo( 'r' ) , 9.5 )
-
-mostrar ( Resta ( expr1 , expr2 ) )
 evaluar ( Resta ( expr1 , expr2 ) ,Atomo( 'v' ) , 20.0 )
-
-mostrar ( Div ( expr1 , expr2 ) )
 evaluar ( Div ( expr1 , expr2 ) ,Atomo( 'x' ) , 1.0 )
-
-mostrar (Expo ( expr1 , expr2 ) )
 evaluar (Expo ( expr1 , expr2 ) ,Atomo( 'c' ) , 10.0 )
-
-mostrar ( Logaritmo ( expr1 ) )
 evaluar ( Logaritmo ( expr1 ) ,Atomo( 'x' ) , 5.0 )
-
-
 
 //mostrar(Suma(Atomo('k'),Prod(Numero(3.0),Atomo('x')),Atomo('x')))
 limpiar(derivar(   Suma(Atomo( 'k' ) , Prod (Numero ( 3.0 ) , Atomo( 'x' ) ) ),Atomo('x') ))
 mostrar(  limpiar(derivar(   Suma(Atomo( 'k' ) , Prod (Numero ( 3.0 ) , Atomo( 'x' ) ) ),Atomo('x') )))
 
+limpiar(Suma(Numero(0.0), Atomo('x')))
+mostrar(limpiar(Suma(Numero(0.0), Atomo('x'))))
+
+limpiar(Prod(Numero(1.0), Atomo('x')))
+mostrar(limpiar(Prod(Numero(1.0), Atomo('x'))))
+
+limpiar(Expo(Atomo('x'), Numero(0.0)))
+mostrar(limpiar(Expo(Atomo('x'), Numero(0.0))))
+
+limpiar(Prod(Numero(0.0), expr3))
+mostrar(limpiar(Prod(Numero(0.0), expr3)))
 
 
 def buenaAprox(f: Expr, a: Atomo, d: Double): Boolean = {
@@ -65,4 +60,4 @@ val e3 = Suma(Resta(Prod(Atomo('x'), Atomo('x')), Numero(4.0)), Prod(Numero(3.0)
 
 raizNewton(e1, Atomo('x'), 2.0, buenaAprox)  
 raizNewton(e2, Atomo('x'), 2.0, buenaAprox)  
-raizNewton(e3, Atomo('x'), 2.0, buenaAprox)  
+raizNewton(e3, Atomo('x'), 2.0, buenaAprox)
